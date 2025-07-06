@@ -1,6 +1,9 @@
 package main
 
-import "context"
+import (
+	"context"
+	"log"
+)
 
 type service struct {
 	store OrderStore
@@ -11,5 +14,6 @@ func NewService(store OrderStore) *service {
 }
 
 func (s *service) CreateOrder(context.Context) error {
+	log.Println("Hello I am I am")
 	return nil
 }
